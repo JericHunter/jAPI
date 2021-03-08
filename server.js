@@ -2,7 +2,8 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const util = require('util');
 const app = require('./config/express');
-require('./data/db');
+const router = require('./controllers/index.js');
+require('./data/api-db');
 mongoose.Promise = Promise;
 
 app.use(router);

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Book = require('../models/quotes.js')
+const Quote = require('../models/quotes.js')
 
 // GET
 router.get("/", (req, res) => {
