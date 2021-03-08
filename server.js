@@ -34,9 +34,7 @@ app.use(checkAuth);
 
 // TODO: Add each controller here, after all middleware is initialized.
 
-
-app.listen(3000, () => {
-    console.log('API listening on port http://localhost:3000!');
-  });
+const port = 8000;
+require('./app/routes')(app, {});app.listen(port, () => {  console.log('We are live on ' + port);});
 
 module.exports = app;
