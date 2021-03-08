@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 var cookieParser = require('cookie-parser');
 const jwt = require('jsonwebtoken');
-
+const MongoClient = require('mongodb').MongoClient;
 const app = express();
 
 const bodyParser = require('body-parser');
