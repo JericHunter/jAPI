@@ -23,8 +23,11 @@
   "homepage": "https://github.com/JericHunter/jAPI#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongodb": "^2.2.16"
+    "mongodb": "^2.2.16",
+    "mongoose": "^5.11.19"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
