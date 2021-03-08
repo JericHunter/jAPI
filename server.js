@@ -3,14 +3,12 @@ const mongoose = require('mongoose');
 const util = require('util');
 const app = require('./config/express');
 const router = require('./controllers/index.js');
-require('./data/api-db');
+require('./data/db');
 mongoose.Promise = Promise;
 
 app.use(router);
 
-if (!module.parent) {
-    const port = process.env.PORT
-    app.listen(process.env.PORT, () => {
-        console.log(`app listening on port ${port}`);
-    });
-}
+app.listen(8000, () => {
+    console.log('listening on localhost:8000')
+});
+module.exports = app;

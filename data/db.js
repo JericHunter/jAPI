@@ -1,16 +1,12 @@
+/* Mongoose Connection */
 const mongoose = require("mongoose");
 assert = require("assert");
 
-
-const mongo_uri = process.env.MONGODB_URI;
+const url = "mongodb://localhost/db";
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  mongo_uri,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  function(err, db) {
-    assert.equal(null, err);
-    console.log("Sucessfully connected to database.");
-  }
+  "mongodb://localhost/reddit-db",
+  { useNewUrlParser: true }
 );
 mongoose.connection.on("error", console.error.bind(console, "MongoDB connection Error:"));
 mongoose.set("debug", true);

@@ -18,7 +18,7 @@ router.get("/title", function(req, res) {
     .then(quote => {
         console.log(quote)
         res.json({ 'author': quote.author, 'quote': quote.quote,
-                    'year': quote.pubYear,
+                    'year': quote.year,
         });
     })
     .catch(err => {

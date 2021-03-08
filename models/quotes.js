@@ -22,5 +22,5 @@ QuoteSchema.pre("save", function(next) {
     next();
 });
 
-Quotw = mongoose.model("Quote", QuoteSchema);
+Quote = mongoose.model("Quote", QuoteSchema);
 module.exports = Quote;
